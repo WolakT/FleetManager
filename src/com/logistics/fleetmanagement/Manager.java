@@ -21,25 +21,30 @@ public class Manager {
     public void addVehicle(Vehicle vehicle) {
         allVehicles.add(vehicle);
     }
-    public void removeVehicle (Vehicle vehicle){
+
+    public void removeVehicle(Vehicle vehicle) {
         allVehicles.remove(vehicle);
     }
-    public String getVehiclesDetails(String registrationNo){
-        for (Vehicle vehicle:allVehicles) {
-            if(vehicle.getRegistrationNo().equals(registrationNo)){
+
+    public String getVehicleDetails(String registrationNo) {
+        for (Vehicle vehicle : allVehicles) {
+            if (vehicle.getRegistrationNo().equals(registrationNo)) {
                 return vehicle.getBrand() + " " + vehicle.getRegistrationNo() + " " + vehicle.getMileage();
             }
         }
         return "No such vehicle in database";
     }
-    public int getTotalVehicleNumber(){
+
+    public int getTotalVehicleNumber() {
         return allVehicles.size();
     }
-    public void getPosition(String name){
+
+    public void getVehiclePosition(String name) {
         for (Vehicle vehicle : allVehicles) {
-            if (vehicle.getDriver().equals(name)){
-                System.out.println(vehicle.getLatitude()+ " " + vehicle.getLongitude());
-            };
+            if (vehicle.getDriver().equals(name)) {
+                System.out.println(vehicle.getLatitude() + " " + vehicle.getLongitude());
+            }
+            ;
         }
 
     }

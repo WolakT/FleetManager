@@ -15,9 +15,12 @@ public class Vehicle {
     public Double getLatitude() {
         return latitude;
     }
-    public Double getLongitude() {return longitude;}
 
-    public Vehicle(String brand, String registrationNo, Double mileage, Driver driver) {
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public Vehicle(String brand, String registrationNo, Double mileage) {
         this.brand = brand;
         this.registrationNo = registrationNo;
         this.mileage = mileage;
@@ -49,8 +52,13 @@ public class Vehicle {
     public void setMileage(Double mileage) {
         this.mileage = mileage;
     }
-    public String getDriver(){
-        return  driver.getName();
+
+    public String getDriver() {
+        return driver.getName();
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 
 }
